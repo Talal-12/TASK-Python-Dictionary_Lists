@@ -58,7 +58,11 @@ print(get_book_property("title", books[0]))
 
 
 def calculate_not_available_books(books):
-    ...
+    unavailable_books = []
+    for book in books:
+        if book["available"] == False:
+            unavailable_books.append(book)
+    return unavailable_books
 
 
 print(calculate_not_available_books(books))
